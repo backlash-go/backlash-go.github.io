@@ -1,1 +1,93 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .parent {
+            margin: 10px;
+        }
+
+        .container {
+            border: 2px solid green;
+            width: 200px;
+            height: 300px;
+            position: relative;
+            padding: 20px;
+
+        }
+
+        .demo1 {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .demo2 {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+        }
+
+        .close {
+            border: 1px solid black;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 8px;
+            background: blue;
+            color: white;
+        }
+
+        button {
+            position: relative;
+        }
+
+        button span {
+            border: 1px solid red;
+            position: absolute;
+            white-space: nowrap;
+            bottom: calc(100% + 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
+
+        button:hover span{
+            display: inline-block;
+        }
+
+        .fixds {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+            bottom: 100px;
+
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="demo1">"child1</div>
+    <div class="demo2">"child2</div>
+    <div class="close">x</div>
+
+    <div style="height: 100px"></div>
+    <button>点击
+        <span>提示内容</span></button>
+</div>
+<div class="fixds">@</div>
+
+</body>
+</html>
