@@ -7,41 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>前端 导航</title>
     <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 <header class="globalHeaders">
-    <input type="text">
-    <button>搜索</button>
+    <form class="searchForm" action="https://www.baidu.com/s" method="get">
+        <input name="wd" type="text">
+        <button>搜索</button>
+    </form>
+
 </header>
 <main class="globalMain">
     <ul class="siteList">
-        <li>
-            <div class="site">
-                <div class="logo">a</div>
-                <div class="link">bibi.com</div>
-            </div>
-        </li>
-        <li>
-            <div class="site">
-                <div class="logo">b</div>
-                <div class="link">acf.com</div>
-            </div>
-        </li>
-        <li>
-            <div class="site">
-                <div class="logo">a</div>
-                <div class="link">bibi.com</div>
-            </div>
-        </li>
 
         <li>
+            <a href="//www.acfun.cn">
+                <div class="site">
+                    <div class="logo">B</div>
+                    <div class="link">acf.cn</div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="//www.bilibili.com">
+                <div class="site">
+                    <div class="logo"><img src="./images/bibi.png" alt=""></div>
+                    <div class="link">bibi.com</div>
+                </div>
+            </a>
+        </li>
+
+
+
+        <li class="last">
             <div class="addButton">
-                新增网站
+                <div class="icon-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#icon-add"></use>
+                    </svg>
+                </div>
+                <div class="text">新增网站</div>
+
             </div>
         </li>
     </ul>
 </main>
 
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="//at.alicdn.com/t/font_2687064_zp3onfxlgh.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

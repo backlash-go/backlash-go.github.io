@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <style>
+    <style>
+        .siteList   > .site  {
+            border: 1px solid red;
+        }
 
-    body:not('.initial') .ui-button {
-      /* 美美的按钮相关CSS */
-      display: inline-block;
-      line-height: 20px;
-      font-size: 14px;
-      text-align: center;
-      color: #4c5161;
-      border-radius: 4px;
-      padding: 10px 15px;
-      min-width: 80px;
-      border: none;
-      background-color: #2a80eb;
-      color: #fff;
-      box-sizing: border-box;
-      font-family: inherit;
-      cursor: pointer;
-      overflow: visible;
-    }
+        .parent > .all > .child {
+            height: 20px;
+           border: 1px solid #2D5BA3;
+        }
 
-  </style>
+
+    </style>
 </head>
 <body>
-<ul style="font-size:12px;border:1px solid deepskyblue;">
-  <li>#朱一龙追梦人#   <small class="ml20">1亿</small></li>
-  <li>#宠爱票房#   <small class="ml20">3亿</small></li>
-  <li>#张艺兴醉拳舞# <small class="ml20">1亿</small></li>
-  <li>#肖战余年MV# <small class="ml20">2亿</small></li>
-  <li style="font-size:initial">#张鑫旭中大鱼# <small class="ml20">233</small></li>
-  <li>我是</li>
+
+<div class="parent">
+        <div class="all">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+</div>
+
+
+<ul class="siteList">
+    <li>
+        <div class="site">
+            <div class="logo">lo</div>
+        </div>
+    </li>
+    <li>
+
+        <div class="site1">
+            <div class="link">link</div>
+
+        </div>
+    </li>
 </ul>
 
 
-<button class="ui-button">美美的按钮</button>
-
-
-<button>as</button>
-<div style="border: 1px solid red; height: 100px"></div>
+<form action="https://www.baidu.com/s" method="get">
+    <input name="wd" type="text">
+    <input type="submit">
+</form>
 
 </body>
 </html>
+
+
