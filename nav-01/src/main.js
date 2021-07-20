@@ -1,36 +1,37 @@
+const $siteList = $('.siteList');
+const $lastLi = $siteList.find('li.last');
+
 const hashMap = [
     {logo: 'A', logType: "text", url: 'https://www.acfun.cn'},
     {logo: 'B', logType: "image", url: 'https://www.bilibili.com'}
-]
-
-const ob1 = {logo: 'A', logType: "text", url: 'https://www.acfun.cn'}
+];
 
 
-for (let k in ob1) {
-    console.log(k)
-}
+const render = () => {
+    $siteList.find('li:not(.last)').remove();
 
-hashMap.forEach((node,index) => {
-    console.log(node.logo)
-    console.log(index)
-})
+    hashMap.forEach((node) => {
+        const $li = $(`<li><a href="${node.url}">
+                <div class="site">
+                    <div class="logo">${node.logo}</div>
+                    <div class="link">${node.url}</div>
+                </div>
+            </a></li>`).insertBefore($lastLi);
+    });
+};
+
+render();
+
 
 $('.addButton').on('click', () => {
-    let url = window.prompt("请输入网站地址")
+    let url = window.prompt("请输入网站地址");
 
-    console.log(url)
-    const $siteList = $('.siteList')
+    hashMap.push({
+        logo: url[0],
+        logType: 'text',
+        url: url
+    });
 
-    console.log($siteList)
+    render();
 
-    const $lastLi = $siteList.find('li.last')
-
-
-    const $li = $(`<a href="${url}">
-                <div class="site">
-                    <div class="logo">${url[0]}</div>
-                    <div class="link">${url}</div>
-                </div>
-            </a>`).insertBefore($lastLi)
-
-})
+});
