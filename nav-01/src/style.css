@@ -1,0 +1,90 @@
+/* css reset */
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+.globalHeaders {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+
+}
+
+.globalHeaders > input {
+    width: 100%;
+    margin-right: 10px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+
+}
+
+.globalHeaders > button {
+    white-space: nowrap;
+    padding: 0 27px;
+    border: none;
+    border-radius: 10px;
+    background: #0282B9;
+    color: white;
+    font-size: 16px;
+}
+
+.globalMain {
+}
+
+.siteList {
+    border: 1px solid #BAE498;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.siteList > li {
+    border: 1px solid red;
+    margin-bottom: 10px;
+
+}
+
+.siteList  .site {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+
+}
+
+.siteList .site > .logo {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+
+.siteList .site > .link {
+    font-size: 14px;
+
+}
+
+.siteList  .addButton {
+    width: 160px;
+}
