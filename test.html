@@ -2,52 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
     <style>
-        .siteList   > .site  {
-            border: 1px solid red;
+        a{
+            display: block;
+            width:200px;
+            height:200px;
+            background-color: red;
         }
-
-        .parent > .all > .child {
-            height: 20px;
-           border: 1px solid #2D5BA3;
+        .d1{
+            width:150px;
+            height: 100px;
+            background-color: black;;
         }
-
-
     </style>
 </head>
 <body>
-
-<div class="parent">
-        <div class="all">
-            <div class="child"></div>
-            <div class="child"></div>
-        </div>
-</div>
-
-
-<ul class="siteList">
-    <li>
-        <div class="site">
-            <div class="logo">lo</div>
-        </div>
-    </li>
-    <li>
-
-        <div class="site1">
-            <div class="link">link</div>
-
-        </div>
-    </li>
-</ul>
-
-
-<form action="https://www.baidu.com/s" method="get">
-    <input name="wd" type="text">
-    <input type="submit">
-</form>
-
+<a href="https://www.baidu.com">
+    <div class="d1"></div>
+</a>
+<script>
+    var d1 = document.querySelector(".d1");
+    d1.onclick = function(e){
+        var ev = e||event;
+        alert(1);
+        ev.preventDefault()
+    }
+</script>
 </body>
 </html>
-
-
