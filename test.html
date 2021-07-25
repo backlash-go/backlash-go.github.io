@@ -15,12 +15,40 @@
             height: 100px;
             background-color: black;;
         }
+
+
+        .aa {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 3px solid green;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;}
+
+        .bb {
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+            bottom: 200px;
+            margin-left: .49em;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            border: 1px solid red;
+            box-shadow: 0px -15px 0px red, -15px -15px 0px red;
+
+        }
     </style>
 </head>
 <body>
 <a href="https://www.baidu.com">
     <div class="d1"></div>
 </a>
+
+<div class="aa"></div>
+
+<div class="bb"></div>
+
 <script>
     var d1 = document.querySelector(".d1");
     d1.onclick = function(e){
